@@ -57,12 +57,28 @@
   },
   ```
 
+  | 参数名   | 含义       | 说明                           |
+  | -------- | ---------- | ------------------------------ |
+  | % stmts  | 语句覆盖率 | 是不是每个语句都执行了？       |
+  | % Branch | 分支覆盖率 | 是不是每个 if 代码块都执行了？ |
+  | % Funcs  | 函数覆盖率 | 是不是每个函数都调用了？       |
+  | % Lines  | 行覆盖率   | 是不是每一行都执行了？         |
+
   - **问题七**
     - async await 怎样进行测试
   - 解决问题七
     - @babel/preset-env 不支持 async await 导致的
     - 对 babel 进行配置新增 plugin ， @babel/plugin-transform-runtime
     - "plugins": ["@babel/plugin-transform-runtime"]
+  - **问题八**
+    - 常用 API
+  - 解决问题八
+    - .not 修饰符允许你测试结果不等于某个值的情况
+    - .toEqual 匹配器会递归的检查对象所有属性和属性值是否相等，常用来检测引用类型
+    - .toHaveLength 可以很方便的用来测试字符串和数组类型的长度是否满足预期
+    - .toThorw 能够让我们测试被测试方法是否按照预期抛出异常
+    - .toMatch 传入一个正则表达式，它允许我们来进行字符串类型的正则匹配
+    - .toContain 匹配对象中是否包含
 
 浅谈前端单元测试 (https://juejin.cn/post/6844903624301084680)
 

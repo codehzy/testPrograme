@@ -6,7 +6,7 @@ export const fetchUser = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
-        name: "moji",
+        name: "hzy",
         age: 24,
       });
     }, 1000);
