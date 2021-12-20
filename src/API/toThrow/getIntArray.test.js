@@ -1,6 +1,6 @@
 import { getIntArray } from "./getIntArray";
 
-// .toThorw 能够让我们测试被测试方法是否按照预期抛出异常
+// .toThrow 能够让我们测试被测试方法是否按照预期抛出异常
 
 test("getIntArray(3.3)应该抛出错误", () => {
   function getIntArrayWrapFn() {
